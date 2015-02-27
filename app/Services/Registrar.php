@@ -1,6 +1,6 @@
-<?php namespace App\Services;
+<?php namespace Larask\Services;
 
-use App\User;
+use Larask\User;
 use Validator;
 use Illuminate\Contracts\Auth\Registrar as RegistrarContract;
 

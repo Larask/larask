@@ -1,4 +1,4 @@
-<?php namespace App\Events;
+<?php namespace Larask\Events;
 
 abstract class Event {
 

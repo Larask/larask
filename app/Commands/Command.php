@@ -1,4 +1,4 @@
-<?php namespace App\Commands;
+<?php namespace Larask\Commands;
 
 abstract class Command {
 
