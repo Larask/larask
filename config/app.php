@@ -135,6 +135,10 @@ return [
         'Larask\Providers\ConfigServiceProvider',
         'Larask\Providers\EventServiceProvider',
         'Larask\Providers\RouteServiceProvider',
+        /*
+         * 3rd Service Providers...
+         */
+        'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
     ],
     /*
     |--------------------------------------------------------------------------
