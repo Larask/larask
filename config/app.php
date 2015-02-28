@@ -140,6 +140,7 @@ return [
          * 3rd Service Providers...
          */
 //        'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
+        'Laracasts\Flash\FlashServiceProvider',
     ],
     /*
     |--------------------------------------------------------------------------
@@ -188,6 +189,10 @@ return [
         'View'      => 'Illuminate\Support\Facades\View',
         'Html'      => 'Illuminate\Html\HtmlFacade',
         'Form'      => 'Illuminate\Html\FormFacade',
+        /*
+         * 3rd Facades...
+         */
+        'Flash'     => 'Laracasts\Flash\Flash'
     ],
 
 ];
