@@ -4,6 +4,7 @@ namespace Larask\Http\Controllers;
 
 use Illuminate\Http\RedirectResponse;
 use Illuminate\View\View;
+use Laracasts\Flash\FlashNotifier;
 use Larask\Http\Requests;
 use Larask\Http\Requests\RegisterRequest;
 use Larask\Services\Slack;
@@ -30,17 +31,22 @@ class RegistrationController extends Controller
      *
      * @param RegisterRequest $request
      * @param Slack           $slack
+     * @param FlashNotifier   $notifier
      *
      * @return RedirectResponse
      */
-    public function store(RegisterRequest $request, Slack $slack)
+    public function store(RegisterRequest $request, Slack $slack, FlashNotifier $notifier)
     {
-        $slack->invite(
-            $request->get('email'),
-            $request->get('first_name')
-        );
+        $email     = $request->get('email');
+        $firstName = $request->get('first_name');
 
-        // TODO Provide better feedback. Maybe some flash message base on invitation result above
+        $result = $slack->invite($email, $firstName);
+
+        if ($result)
+            $notifier->success("Success! An email has been sent to {$email}. Check it out!");
+        else
+            $notifier->error("Uh oh! An error occur. May be you already registered!");
+
         return back();
     }
 }

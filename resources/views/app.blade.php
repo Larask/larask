@@ -20,6 +20,8 @@
 </head>
 <body>
 
+@include('flash::message')
+
 @yield('content')
 
 <!-- Scripts -->
