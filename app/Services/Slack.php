@@ -53,7 +53,7 @@ class Slack
 
         $body = json_decode($response->getBody()->getContents());
 
-        if ( ! $body['ok'])
+        if ( ! $body->ok)
             return false;
 
         return true;
