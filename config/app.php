@@ -139,7 +139,7 @@ return [
         /*
          * 3rd Service Providers...
          */
-        'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
+//        'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
     ],
     /*
     |--------------------------------------------------------------------------
