@@ -131,6 +131,7 @@ return [
         /*
          * Application Service Providers...
          */
+        'Larask\Providers\LogServiceProvider',
         'Larask\Providers\AppServiceProvider',
         'Larask\Providers\BusServiceProvider',
         'Larask\Providers\ConfigServiceProvider',
